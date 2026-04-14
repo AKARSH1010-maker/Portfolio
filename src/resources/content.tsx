@@ -5,6 +5,7 @@ const person: Person = {
   firstName: "Akarsh",
   lastName: "Singh Sisoudia",
   name: `Akarsh Singh Sisoudia`,
+  avatar: "",
   role: "B.Tech CSE (AI & ML) Student | Full Stack Developer",
   email: "akarshsisoudia7@gmail.com",
   location: "Asia/Kolkata",
