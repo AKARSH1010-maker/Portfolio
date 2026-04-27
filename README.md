@@ -5,6 +5,10 @@ This portfolio showcases my projects, technical skills, and experience in **Full
 
 ---
 
+## Live Link: portfolio- https://portfolio-mnus.vercel.app/
+
+---
+
 ## Tech Stack
 
 - Next.js 14
@@ -30,5 +34,5 @@ This portfolio showcases my projects, technical skills, and experience in **Full
 - Easy customization
 - Minimal & professional layout
 
-Live Link: portfolio- https://portfolio-mnus.vercel.app/
+
 
