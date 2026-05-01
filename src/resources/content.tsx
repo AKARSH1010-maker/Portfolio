@@ -22,7 +22,7 @@ const social: Social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/AKARSH1010-maker",
+    link: "https://github.com/akarsh0910",
     essential: true,
   },
   {
