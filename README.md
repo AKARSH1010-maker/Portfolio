@@ -1,4 +1,4 @@
-# Akarsh Singh Sisoudia — Developer Portfolio
+ Developer Portfolio
 
 A modern developer portfolio built using **Next.js**, **TypeScript**, and **Once UI**.  
 This portfolio showcases my projects, technical skills, and experience in **Full Stack Development, AI/ML, and Data Analytics**.
@@ -33,6 +33,8 @@ This portfolio showcases my projects, technical skills, and experience in **Full
 - MDX based project system
 - Easy customization
 - Minimal & professional layout
+
+ ## Created by-  Akarsh Singh Sisoudia 
 
 
 
