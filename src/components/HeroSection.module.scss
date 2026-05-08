@@ -1,0 +1,54 @@
+.glowingBg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  height: 500px;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(
+    circle,
+    rgba(111, 148, 241, 0.15) 0%,
+    rgba(111, 148, 241, 0.08) 30%,
+    rgba(111, 148, 241, 0.02) 70%,
+    transparent 100%
+  );
+  filter: blur(100px);
+  will-change: opacity, scale;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+}
+
+.heading {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.1em;
+  line-height: 1.2;
+
+  span {
+    display: inline-block;
+  }
+}
+
+.subline {
+  display: block;
+  line-height: 1.6;
+}

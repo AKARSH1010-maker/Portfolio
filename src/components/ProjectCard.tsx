@@ -1,5 +1,7 @@
 "use client";
 
+import { motion } from "framer-motion";
+
 import {
   AvatarGroup,
   Carousel,
@@ -31,60 +33,74 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   link,
 }) => {
   return (
-    <Column fillWidth gap="m">
-      <Carousel
-        sizes="(max-width: 960px) 100vw, 960px"
-        items={images.map((image) => ({
-          slide: image,
-          alt: title,
-        }))}
-      />
-      <Flex
-        s={{ direction: "column" }}
-        fillWidth
-        paddingX="s"
-        paddingTop="12"
-        paddingBottom="24"
-        gap="l"
-      >
-        {title && (
-          <Flex flex={5}>
-            <Heading as="h2" wrap="balance" variant="heading-strong-xl">
-              {title}
-            </Heading>
-          </Flex>
-        )}
-        {(avatars?.length > 0 || description?.trim() || content?.trim()) && (
-          <Column flex={7} gap="16">
-            {avatars?.length > 0 && <AvatarGroup avatars={avatars} size="m" reverse />}
-            {description?.trim() && (
-              <Text wrap="balance" variant="body-default-s" onBackground="neutral-weak">
-                {description}
-              </Text>
-            )}
-            <Flex gap="24" wrap>
-              {content?.trim() && (
-                <SmartLink
-                  suffixIcon="arrowRight"
-                  style={{ margin: "0", width: "fit-content" }}
-                  href={href}
-                >
-                  <Text variant="body-default-s">Read case study</Text>
-                </SmartLink>
-              )}
-              {link && (
-                <SmartLink
-                  suffixIcon="arrowUpRightFromSquare"
-                  style={{ margin: "0", width: "fit-content" }}
-                  href={link}
-                >
-                  <Text variant="body-default-s">View project</Text>
-                </SmartLink>
-              )}
+    <motion.div
+      initial={{ opacity: 0, y: 36, scale: 0.98 }}
+      whileInView={{ opacity: 1, y: 0, scale: 1 }}
+      viewport={{ once: true, margin: "-80px" }}
+      transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
+      whileHover={{ y: -6 }}
+      style={{ width: "100%", willChange: "opacity, transform" }}
+    >
+      <Column fillWidth gap="m">
+        <Carousel
+          sizes="(max-width: 960px) 100vw, 960px"
+          items={images.map((image) => ({
+            slide: image,
+            alt: title,
+          }))}
+        />
+
+        <Flex
+          s={{ direction: "column" }}
+          fillWidth
+          paddingX="s"
+          paddingTop="12"
+          paddingBottom="24"
+          gap="l"
+        >
+          {title && (
+            <Flex flex={5}>
+              <Heading as="h2" wrap="balance" variant="heading-strong-xl">
+                {title}
+              </Heading>
             </Flex>
-          </Column>
-        )}
-      </Flex>
-    </Column>
+          )}
+
+          {(avatars?.length > 0 || description?.trim() || content?.trim()) && (
+            <Column flex={7} gap="16">
+              {avatars?.length > 0 && <AvatarGroup avatars={avatars} size="m" reverse />}
+
+              {description?.trim() && (
+                <Text wrap="balance" variant="body-default-s" onBackground="neutral-weak">
+                  {description}
+                </Text>
+              )}
+
+              <Flex gap="24" wrap>
+                {content?.trim() && (
+                  <SmartLink
+                    suffixIcon="arrowRight"
+                    style={{ margin: "0", width: "fit-content" }}
+                    href={href}
+                  >
+                    <Text variant="body-default-s">Read case study</Text>
+                  </SmartLink>
+                )}
+
+                {link && (
+                  <SmartLink
+                    suffixIcon="arrowUpRightFromSquare"
+                    style={{ margin: "0", width: "fit-content" }}
+                    href={link}
+                  >
+                    <Text variant="body-default-s">View project</Text>
+                  </SmartLink>
+                )}
+              </Flex>
+            </Column>
+          )}
+        </Flex>
+      </Column>
+    </motion.div>
   );
 };
