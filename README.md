@@ -26,7 +26,6 @@ This portfolio showcases my projects, technical skills, and experience in **Full
 - Modern clean UI
 - Fully responsive design
 - Projects showcase
-- About / Resume section
 - Dark theme support
 - SEO optimized metadata
 - Fast performance
