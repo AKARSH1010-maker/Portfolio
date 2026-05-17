@@ -32,7 +32,6 @@ This portfolio showcases my projects, technical skills, and experience in **Full
 - MDX based project system
 - Easy customization
 
- ## Created by-  Akarsh Singh Sisoudia 
 
 
 
